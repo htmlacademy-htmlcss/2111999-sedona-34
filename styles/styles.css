@@ -13,7 +13,7 @@
     src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
 }
-
+/* определили параметры для всего body */
 body {
     font-family: "PT Sans", sans-serif;
     font-size: 22px;
@@ -22,33 +22,142 @@ body {
     background-color: #FFFFFF;
 }
 
-li {
+/* убрали у всех элементов списка маркер */
+.navigation-item {
     list-style-type: none;
 }
 
+.advantages-item {
+    list-style-type: none; 
+}
+
+.footer-social-item {
+    list-style-type: none;  
+}
+
+.footer-contact-item {
+    list-style-type: none; 
+}
+
+.footer-logo-item {
+    list-style-type: none;
+}
+
+.breadcrumbs-item {
+    list-style-type: none; 
+}
+
+.catalog-filter-item {
+    list-style-type: none;
+}
+
+.hotel-card-item {
+    list-style-type: none; 
+}
+
+.star-item {
+    list-style-type: none; 
+}
+
+.pagination-item {
+    list-style-type: none;
+}
+
+.pagination-link {
+    text-decoration: none;
+}
+/* переопределили параметры для ссылок в навигации */
 .navigation-link {
     font-size: 20px;
-    color: inherit;
-    background-color: inherit;
+    color: #000000;
+    background-color: #FFFFFF;
     font-weight: 700;
     text-decoration: none;
     text-transform: capitalize;
 }
-
+/* определили параметры для всех кнопок */
 .button {
+    color: #FFFFFF;
     text-align: center;
     text-transform: uppercase;
+    text-decoration: none; 
+}
+/* определили параметры цвета для кнопок */
+.button-interest {
+    background: #756157;
 }
 
-.brown {
+.button-action {
+    background: #82B3D3;
+}
+
+.button-selected {
+    background: #7DB54F; 
+}
+/* переопределили цвет шрифта и задали параменты для кнопок-ссылок */
+.button-detail {
     color: #FFFFFF;
-    background-color: #756157; 
+    font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     text-decoration: none;
-    border-radius: 4px; 
+    text-transform: uppercase;
+    border-radius: 4px;
 }
 
+.button-favourites {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.button-come {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 4px;
+}
+
+.button-search {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    border-radius: 4px;
+}
+
+.button-newsletter {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.button-apply {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 4px;
+}
+
+.button-cancellation {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: none;
+    background-color: transparent;
+}
+/* определили параметры для цифры 12 у ссылки Избранное */
+.favorites-number {
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #7DB54F;
+    letter-spacing: -0.1em;
+}
+/* определили параметры для секции с главной картинкой. */
 .main-img {
     color: #FFFFFF;
     background-color: #000000;
@@ -60,7 +169,7 @@ li {
 .conteiner-image {
     text-align: center;
 }
-
+/* переопределили параметры подзаголовку и абзацу */
 .subtitle h2 {
     font-weight: 700;
     font-size: 30px;
@@ -70,13 +179,11 @@ li {
 }
 
 .subtitle p {
-    font-weight: 400;
     text-align: center;
     color: #333333;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
-/* непереопределяются элементы*/
+/* определили основные параметры для элементов (заголовок, номер, абзац) Причины посещения */
 .advantages-item h3 {
     font-weight: 700;
     font-size: 24px;
@@ -84,30 +191,50 @@ li {
     text-transform: uppercase;
 }
 .advantages-item span {
-    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
 }
 .advantages-item p {
-    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
 }
 
-.dark-blue {
-    color: #FFFFFF;
-    background-color: #82B3D3;
-    text-align: center; 
+.advantages-item {
+    text-align: center;
+}
+/* определили параметры для синих блоков с фото */
+.advantages-key {
+    background: #82B3D3;
+    color: #FFFFFF; 
+}
+/* переопределили цвета блоков с подпунктами первой причины */
+.advantages-item-housing {
+    background: rgba(131, 179, 211, 0.12);
 }
 
-.light-blue {
-    background: rgba(131, 179, 211, 0.12);    
+.advantages-item-souvenirs {
+    background: rgba(131, 179, 211, 0.12);
+}
+/* переопределили цвета блоков для остальных пунктов причин */
+.advantages-item-area {
+    background: rgba(131, 179, 211, 0.12);
 }
 
-.light-blue p {
-    color: #333333; 
+.advantages-item-tourists {
+    background: rgba(131, 179, 211, 0.12);
 }
 
+.advantages-item-road {
+    background: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+/* определили параметры для секции Заинтересовались */
 .search {
     text-align: center;
 }
@@ -121,100 +248,60 @@ li {
 }
 
 .search p {
-    font-weight: 400;
     font-size: 22px;
     line-height: 26px;
     text-align: center;
     color: #333333;
 }
-
-.button-search {
-    color: #FFFFFF;
-    background-color: #756157;
-    font-weight: 700; 
-    font-size: 20px;
-    line-height: 36px;
-    text-transform: uppercase;
-    border-radius: 4px;
-}
-
+/* определили параметры и добавили фоновое изображение для секции Рассылка */
 .newsletter-section {
     color: #FFFFFF;
     background-color: #000000;
     background-image: url("../images/background-subscribe.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .newsletter-section h3 {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    color: #FFFFFF;
     text-transform: uppercase;
     text-align: center;
 }
 
 .newsletter-section p {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    font-size: 22px;
-    color: #FFFFFF;
     text-align: center;
 }
 
 .field-email {
     background: #F2F2F2;
-}
- 
-
-.field-email {
-    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     align-items: center;
-    color: #000000;
 }
-
-.button-newsletter {
-    color: #FFFFFF;
-    background: #82B3D3;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 36px;
-    border-radius: 0px 10px 10px 0px;
-}
-
-.page-footer {
-    color: #000000;
-    background-color: #FFFFFF;  
-}
-
+/* определили параметры и для секции с контактами, переопределили цвет шрифта номера телефона*/
 .footer-contact-link {
-    font-weight: 400;
+    color: #000000;
     font-size: 40px;
     line-height: 40px;
     text-align: center;
     text-transform: uppercase;
-    color: #000000;
+    text-decoration: none;
+}
+/* убрали подчеркивания у ссылок соц.сетей */
+.social-vk-link {
     text-decoration: none;
 }
 
-.footer-social-item a {
+.social-telegram-link {
     text-decoration: none;
 }
 
-.button-action {
-    color: #FFFFFF;
-    background-color: #756157; 
-    font-size: 16px;
-    line-height: 20px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    text-align: center;
-    border-radius: 4px;
+.social-Youtube-link {
+    text-decoration: none;
 }
-
+/* определили параметры для секции с фильтрами и добавили фоновое изображение */
 .filer-content-hotel {
     color: #FFFFFF;
     background-color: #000000;
@@ -233,10 +320,6 @@ li {
 .breadcrumbs-link {
     color: #FFFFFF;
     text-decoration: none;
-}
-
-.breadcrumbs-link {
-    font-weight: 400;
     font-size: 16px;
     line-height: 21px;
 }
@@ -244,31 +327,134 @@ li {
 .catalog-filter-title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 26px;
 }
 
 .control-input {
-    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
 }
 
-.button-apply {
+.title-result {
     font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+/* определили параметры для ссылок с наименованиями гостиниц */
+.hotel-card-link {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    text-decoration: none;
+}
+/* убрали подчеркивание у ссылок изображений слайд-шоу */
+.button-slide {
+    text-decoration: none; 
+}
+/* определили параметры для секции сортировки */
+.select-control {
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+}
+/* определили параметры для информации в карточке гостиниц */
+.information-hotel {
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+}
+
+.rating-item {
+    color: #333333;
     font-size: 16px;
     line-height: 20px;
-    background-color: #82B3D3;
+    text-align: center;
+    text-transform: uppercase;
+    background: #F2F2F2;
     border-radius: 4px;
+}
+/* определили параметры для кнопок пагинации */
+.pagination-link {
     color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #82B3D3;
+    border: 1px solid #82B3D3;
+    border-radius: 4px;
+}
+/* переопределили цвет шрифта и фона у первой кнопки пагинации */
+.pagination-current {
+    color: #000000;
+    background: #F2F2F2; 
+    border: 0ch;
+}
+/* переопределили цвет и размер шрифта для абзаца */
+.number-of-page {
+    color: #333333;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: none;
+}
+/* переопределили цвет и размер шрифта в селекте */
+.select-number {
+    color: #333333;
+    font-size: 18px;
+    line-height: 21px;
+}
+/* определили параметры для секции Рассылка на странице каталога (цвет шрифта, без фонового изображения */
+.newsletter-catalog h3 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
     text-transform: uppercase;
 }
 
-.button-cancellation {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #FFFFFF;
+.newsletter-catalog p {
+    color: #333333;
+    text-align: center;
 }
+/* задали рамку для иконок слад-шоу */
+.button-list {
+    border: 3px solid #000000;
+    border-radius: 4px;
+}
+
+.image-card {
+    border: 3px solid #E5E5E5;
+    border-radius: 4px;
+}
+
+.button-table {
+    border: 3px solid #E5E5E5;
+    border-radius: 4px;
+}
+/* поместили весь контент в контейнер для определения границ */
+.conteiner {
+    width: 100%;
+    max-width: 1200 px;
+    margin: 0 auto;
+}
+/* визуально скрыли все элементы с классом visually-hidden */
+.visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+
+
+ 
+
 
 
 
