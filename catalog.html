@@ -8,36 +8,38 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <div class="conteiner">
+  <div class="page-conteiner">
   <header class="header">
     <nav class="navigation">
+      <div class="logo-wrapper">
       <a class="navigation-logo" href="index.html">
         <img class="header-logo" src="images/logo-sedona.svg" width="139" height="70" alt="Логотип сайта города Седона.">
       </a>
+     </div>
       <ul class="navigation-list">
-        <li class="navigation-item">
-          <a class="navigation-link" href="index.html">Главная</a>
+        <li class="navigation-item avigation-item-main">
+          <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
         </li>
-        <li class="navigation-item">
+        <li class="navigation-item navigation-item-about">
           <a class="navigation-link" href="#">О Седоне</a>
         </li>
-        <li class="navigation-item">
+        <li class="navigation-item navigation-item-hotels">
           <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
         </li>
       </ul>
       <ul class="navigation-list navigation-user">
-        <li class="navigation-item">
+        <li class="navigation-item navigation-user-search">
           <a class="navigation-link" href="#">
             <img class="navigation-image-search" src="../images/icon-navigation/icon-search.svg" width="18" height="18" alt="Поиск.">
           </a>
         </li>
-        <li class="navigation-item">
+        <li class="navigation-item navigation-user-favorite">
           <a class="navigation-link" href="#">
-            <img class="navigation-image-search" src="../images/icon-navigation/icon-favorite.svg" width="18" height="17" alt="Избранное.">
+            <img class="navigation-image-favorite " src="../images/icon-navigation/icon-favorite.svg" width="18" height="17" alt="Избранное.">
           </a>
           <span class="favorites-number">12</span>
         </li>
-        <li class="navigation-item">
+        <li class="navigation-item navigation-user-interest">
           <button class="button button-interest button-come" type="button">Хочу сюда
         </li>
       </ul>
@@ -48,11 +50,11 @@
       <h1 class="visually-hidden">Фильтр гостиниц по категориям</h1>
       <p class="inner-header-title">Гостиницы Седоны</p>
       <ul class="breadcrumbs">
-        <li class="breadcrumbs-item">
+        <li class="breadcrumbs-item breadcrumbs-item-home">
           <a class="breadcrumbs-link" href="index.html">
             <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m.16 6.15 6-5.5 6 5.5v6.2h-12v-6.2Zm1 .4v4.8h10v-4.8l-5-4.5-5 4.5Zm4 3.8h-1v-3.5h4v3.5h-1v-2.5h-2v2.5Z" fill="#fff"/></svg>
         </li>
-        <li class="breadcrumbs-item">
+        <li class="breadcrumbs-item breadcrumbs-item-arrow">
           <svg width="6" height="9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.05 4.07 1.25.67c-.2-.2-.6-.2-.9 0-.3.2-.2.6 0 .8l3.3 3-3.2 3c-.2.2-.2.6 0 .8 0 .1.3.2.4.2.1 0 .3-.1.4-.2l3.8-3.4c.3-.2.3-.6 0-.8Z" fill="#fff"/></svg>
         </li>
         <li class="breadcrumbs-item">
@@ -60,7 +62,7 @@
         </li>
       </ul>
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="catalog-filter-group">
+        <fieldset class="catalog-filter-group catalog-filter-group-infrastructure">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
@@ -80,7 +82,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="catalog-filter-group">
+        <fieldset class="catalog-filter-group catalog-filter-group-housing">
           <legend class="catalog-filter-title">Тип Жилья:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
@@ -118,11 +120,14 @@
             </label>
           </li>
         </fieldset>
-        <button class="button button-action button-apply" type="submit">Применить</button>
-        <button class="button button-cancellation" type="reset">Сбросить</button>
+        <div class="filter-button-wrapper">
+          <button class="button button-action button-apply" type="submit">Применить</button>
+          <button class="button button-cancellation" type="reset">Сбросить</button>
+        </div>
       </form>
     </section>
     <section class="catalog">
+      <div class="sort">
       <h2 class="visually-hidden">Каталог</h2>
       <p class="title-result">Найдено гостиниц: 38</p>
       <select class="select-control" aria-label="Сортировка">
@@ -141,6 +146,8 @@
         <svg width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Таблицей"><path d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z" fill="#000"/></svg>
       </a>
       </div>
+     </div>
+     <div class="hotel-card-wrapper">
       <ul class="hotel-card">
         <li class="hotel-card-item">
           <img class="hotel-filter-image" src="images/catalog/amara-resort-and-spa.jpg" width="300" height="211" alt="Amara Resort & Spa.">
@@ -238,6 +245,7 @@
           <span class="rating-item">Рейтинг: 5,0</span>
         </li>
       </ul>
+    </div>
       <div class="pagination">
         <h3 class="visually-hidden">Нумерация страниц каталога</h3>
         <ul class="pagination">
@@ -260,13 +268,13 @@
             <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
-      </div>
         <p class="number-of-page">Гостиниц на странице:</p>
         <select class="select-number" aria-label="Выбрать количество гостиниц на странице.">
           <option value="four">4</option>
           <option value="five">5</option>
           <option value="six">6</option>
         </select>
+      </div>
       </section>
       <section class="newsletter-catalog">
         <h3>Подпишитесь на рассылку</h3>
