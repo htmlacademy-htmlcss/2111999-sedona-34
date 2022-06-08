@@ -17,6 +17,7 @@
 header {
     margin: 0;
     padding: 0;
+
 }
 
 /* определили параметры для всего body */
@@ -26,6 +27,7 @@ body {
     line-height: 26px;
     color: #000000;
     background-color: #FFFFFF;
+    margin: 0;
 }
 
 /* убрали у всех элементов списка маркер */
@@ -55,10 +57,6 @@ body {
 
 .catalog-filter-item {
     list-style-type: none;
-}
-
-.hotel-card-item {
-    list-style-type: none; 
 }
 
 .star-item {
@@ -125,6 +123,7 @@ body {
     font-size: 16px;
     line-height: 20px;
     border-radius: 4px;
+    padding: 9px 15px 8px 15px;
 }
 
 .button-search {
@@ -240,6 +239,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
+    margin: 0;
 }
 /* определили параметры для секции Заинтересовались */
 .search {
@@ -286,6 +286,10 @@ body {
     font-size: 18px;
     line-height: 21px;
     align-items: center;
+    width: 87px;
+    padding: 20px 491px 19px 22px;
+    border: 0;
+
 }
 /* определили параметры и для секции с контактами, переопределили цвет шрифта номера телефона*/
 .footer-contact-link {
@@ -346,6 +350,10 @@ body {
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
+    margin-left: 72px;
+    margin-top: 57px;
+    margin-bottom: 61 px;
+    margin-right: 191px;
 }
 /* определили параметры для ссылок с наименованиями гостиниц */
 .hotel-card-link {
@@ -364,6 +372,11 @@ body {
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+    width: 290px;
+    margin-top: 50px;
+    margin-left: 191 px;
+    margin-bottom: 56px;
+    display: block;
 }
 /* определили параметры для информации в карточке гостиниц */
 .information-hotel {
@@ -408,8 +421,6 @@ body {
     margin: 0;
     width: 175 px;
     align-items: center;
-    padding-left: 270px;
-    padding-right: 51px;
 }
 /* переопределили цвет и размер шрифта в селекте */
 .select-number {
@@ -432,18 +443,35 @@ body {
 }
 /* задали рамку для иконок слад-шоу */
 .button-list {
-    border: 3px solid #000000;
+    display: flex;
+    border: 3px solid #E5E5E5;
     border-radius: 4px;
+    width: 48px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    padding: 17px 16px;
 }
 
 .image-card {
     border: 3px solid #E5E5E5;
     border-radius: 4px;
+    display: flex;
+    width: 48px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    padding: 17px 16px;
 }
 
 .button-table {
     border: 3px solid #E5E5E5;
     border-radius: 4px;
+    display: flex;
+    width: 48px;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 16px;
 }
 
 /* визуально скрыли все элементы с классом visually-hidden */
@@ -483,6 +511,7 @@ body {
     margin-left: auto;
     margin-right: 70px;
     display: flex;
+    align-items: center;
 }
 
 .navigation-logo {
@@ -588,12 +617,10 @@ body {
 }
 
 .button-search {
-    margin: 0;
-    padding-bottom: 94px;
-    width: auto;
-    height: 60px;
-    padding: 0px 0px 94px 0px;
+    margin-bottom: 93px;
+    width: 574px;
     border: 0;
+    padding: 0;
 }
 
  
@@ -604,18 +631,20 @@ body {
 
 .description-newsletter {
     margin: 0; 
-    padding: 0px 362px 46px; 
+    padding: 0 362px 0 363px; 
 }
 
 .newsletter-form {
-    margin: 0 auto;
     width: 600px;
+    box-sizing: border-box;
 
 }
 
 .button-newsletter {
     margin: 0;
     width: 200px;
+    padding: 12px 15px;
+    border: 0;
 }
     
 
@@ -630,18 +659,24 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
+    margin: 45px 42px 35px 70px;
+    padding: 0;
+    width: 142px;
 }
 
 .footer-contact-list {
     display: flex;
     margin: 0;
     align-items: center;
+    width: 720px;
+    justify-content: center;
 }
 
 .footer-logo-list {
     display: flex;
     margin: 0; 
     align-items: center;
+    width: 115px;
 }
 
 .breadcrumbs {
@@ -682,39 +717,98 @@ body {
     display: flex;
 }
 
-.select-control {
-    display: flex;
-    width: 290px;
-}
-
 .slide-show {
     display: flex;
     width: 160px;
+    margin: 50px 71px 57px 78px;
+    display: flex;
+    justify-content: center;
 }
 
 .hotel-card-wrapper {
     display: flex;
-    max-width: 1056px;
     margin: 0;
-    flex-wrap: wrap;
 }
 
 .hotel-card {
     display: flex;
-    margin: 0;
+    margin: 0 71px 0 73px;
+    padding-left: 0;
+    flex-wrap: wrap;
 }
 
 .hotel-card-item {
     display: flex;
-    flex-direction: column;
-    width: 300px;
+    flex-wrap: wrap;
+    width: 340px;
     padding: 20px;
+    margin: 0;
+    list-style-type: none;
+    align-items: center;
+    padding: 0;
+}
+
+.information-hotel-type {
+    width: 140px;
+    margin-left: 20px;
+    display: flex;
+}
+
+.information-hotel-price {
+    width: 140px;
+    margin-right: 20px;
+    display: flex;
+}
+
+.button-detail {
+    width: 140px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-favourites {
+    width: 140px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+}
+
+.stars {
+    display: flex;
+    width: 140px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-top: 16px;
+}
+
+.rating-item {
+    display: flex;
+    width: 140px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hotel-filter-image {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 16px;
+}
+
+.name-title {
+    width: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0;
 }
 
 .social-item-vk {
     padding-right: 12px;
-    padding-left: 70px;
     width: 24px;
 }
 
@@ -743,6 +837,18 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     margin: 0;
+    padding: 0;
+}
+
+.pagination-list {
+    display: flex;
+    width: 400px;
+    align-content: space-between;
+    margin-top: 96px;
+    margin-left: 73px;
+    margin-right: 270px;
+    padding: 0;
+
 }
 
 .pagination li {
@@ -754,3 +860,7 @@ body {
     width: 160px; 
 }
 
+.newsletter-form {
+    display: flex;
+    margin: 46px 200px 94px 200px;
+}
