@@ -14,33 +14,37 @@
           <img class="header-logo" src="images/logo-sedona.svg" width="139" height="70" alt="Логотип сайта города Седона.">
         </a>
         </div>
-        <ul class="navigation-list">
+        <ul class="navigation-list navigation-list-left">
           <li class="navigation-item navigation-item-main">
-            <a class="navigation-link navigation-link-current">Главная</a>
+            <a class="navigation-link navigation-link-current navigation-link-left">Главная</a>
           </li>
           <li class="navigation-item navigation-item-about">
-            <a class="navigation-link" href="#">О Седоне</a>
+            <a class="navigation-link navigation-link-left" href="#">О Седоне</a>
           </li>
           <li class="navigation-item navigation-item-hotels">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link navigation-link-left" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-user">
+        <ul class="navigation-list navigation-list-user">
           <li class="navigation-item navigation-user-search">
-            <a class="navigation-link" href="#">
+            <a class="navigation-link navigation-link-right" href="#">
               <img class="navigation-image-search" src="../images/icon-navigation/icon-search.svg" width="18" height="18" alt="Поиск.">
             </a>
           </li>
           <li class="navigation-item navigation-user-favorite">
-            <a class="navigation-link" href="#">
+            <a class="navigation-link navigation-link-right" href="#">
               <img class="navigation-image-favorite" src="../images/icon-navigation/icon-favorite.svg" width="18" height="17" alt="Избранное."> 
             </a>
+          </li> 
+          <li class="navigation-item navigation-user-number"> 
             <span class="favorites-number">12</span>
           </li>
           <li class="navigation-item navigation-user-interest">
+            <div class="button-come-wrapper">
             <a class="button button-interest button-come" href="#search-section">Хочу сюда!
               <span class="visually-hidden">Хочу сюда!</span>
             </a>
+           </div>
           </li>
         </ul>
       </nav>
@@ -68,22 +72,28 @@
               </div>
               <img src="images/advantages-list-foto/town.jpg" width="800" height="384" alt="Вид городка Седона.">
             </div>
-            <ul class="advantages-list additional">
+            <ul class="advantages-list advantages-list-additional">
               <div class="additional-items">
               <li class="advantages-item advantages-item-housing">
+                <div class="advantages-list-additional-wrapper">
                 <img class="advantage-list-icon" src="../images/advantages-list-icon/icon-home.svg" width="75" height="72" alt="Иконка домика.">
                 <h3>Жильё</h3>
                 <p>Рекомендуем пожить <br> в настоящем мотеле, <br> всё как в кино!</p>
+                </div>
               </li>
               <li class="advantages-item advantages-item-food">
+                <div class="advantages-list-additional-wrapper">
                 <img class="advantage-list-icon" src="../images/advantages-list-icon/icon-food.svg" width="74" height="70" alt="Иконка бургера.">
                 <h3>Еда</h3>
                 <p>Всегда заказывайте <br> топовый фирменный бургер, <br> вы не разочаруетесь!</p>
+                </div>
               </li>
               <li class="advantages-item advantages-item-souvenirs">
+                <div class="advantages-list-additional-wrapper">
                 <img class="advantage-list-icon" src="../images/advantages-list-icon/icon-souvenirs.svg" width="64" height="76" alt="Иконка сувенира">
                 <h3>Сувениры</h3>
                 <p>Не только китайского, <br> но и настоящего местного <br> производства!</p>
+                </div>
               </li>
             </div>
             </ul>
@@ -100,19 +110,25 @@
           </li>
           <div class="advantages-base">
           <li class="advantages-item advantages-item-area">
+            <div class="advantages-list-base-wrapper">
             <h3>Небольшая <br> площадь</h3>
             <span>-№3-</span>
             <p>Все достопримечательности <br> находятся очень близко</p>
+            </div>
           </li>
           <li class="advantages-item advantages-item-road">
+            <div class="advantages-list-base-wrapper">
             <h3>Красивая <br> дорога</h3>
             <span>-№4-</span>
             <p>Ехать в Седону из Лас-Вегаса <br> совсем не скучно!</p>
+            </div>
           </li>
           <li class="advantages-item advantages-item-tourists">
+            <div class="advantages-list-base-wrapper">
             <h3>Мало <br> туристов</h3>
             <span>-№5-</span>
             <p>Большинство едет в Гранд <br> Каньон и толпится там</p>
+            </div>
           </li>
         </div>
         </ul>
@@ -126,7 +142,7 @@
         <h3 class="title-newsletter">Подпишись на рассылку</h3>
         <p class="description-newsletter">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form class="newsletter-form" action="//echo.htmlacademy.ru/" method="post">
-          <label for="newsletter-email" class="visually hidden">E-mail</label>
+          <label for="newsletter-email" class="visually-hidden">E-mail</label>
           <input class="field-email" placeholder="Ваш e-mail" type="e-mail" name="newsletter-email" id="newsletter-email" required>
           <button class="button button-action button-newsletter" type="submit">Подписаться</button>
         </form>

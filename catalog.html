@@ -16,31 +16,35 @@
         <img class="header-logo" src="images/logo-sedona.svg" width="139" height="70" alt="Логотип сайта города Седона.">
       </a>
      </div>
-      <ul class="navigation-list">
-        <li class="navigation-item avigation-item-main">
-          <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
+      <ul class="navigation-list navigation-list-left">
+        <li class="navigation-item navigation-item-main">
+          <a class="navigation-link navigation-link-current navigation-link-left" href="index.html">Главная</a>
         </li>
         <li class="navigation-item navigation-item-about">
-          <a class="navigation-link" href="#">О Седоне</a>
+          <a class="navigation-link navigation-link-left" href="#">О Седоне</a>
         </li>
         <li class="navigation-item navigation-item-hotels">
-          <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+          <a class="navigation-link navigation-link-left" href="catalog.html">Гостиницы</a>
         </li>
       </ul>
-      <ul class="navigation-list navigation-user">
+      <ul class="navigation-list navigation-list-user">
         <li class="navigation-item navigation-user-search">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link navigation-link-right" href="#">
             <img class="navigation-image-search" src="../images/icon-navigation/icon-search.svg" width="18" height="18" alt="Поиск.">
           </a>
         </li>
         <li class="navigation-item navigation-user-favorite">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link navigation-link-right" href="#">
             <img class="navigation-image-favorite " src="../images/icon-navigation/icon-favorite.svg" width="18" height="17" alt="Избранное.">
           </a>
+          <li class="navigation-item navigation-user-number">
           <span class="favorites-number">12</span>
+          </li>
         </li>
         <li class="navigation-item navigation-user-interest">
-          <button class="button button-interest button-come" type="button">Хочу сюда
+          <div class="button-come-wrapper">
+          <button class="button button-interest button-link-come" type="button">Хочу сюда
+          </div>
         </li>
       </ul>
     </nav>
@@ -51,16 +55,17 @@
       <p class="inner-header-title">Гостиницы Седоны</p>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item breadcrumbs-item-home">
-          <a class="breadcrumbs-link" href="index.html">
+          <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
             <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m.16 6.15 6-5.5 6 5.5v6.2h-12v-6.2Zm1 .4v4.8h10v-4.8l-5-4.5-5 4.5Zm4 3.8h-1v-3.5h4v3.5h-1v-2.5h-2v2.5Z" fill="#fff"/></svg>
         </li>
         <li class="breadcrumbs-item breadcrumbs-item-arrow">
           <svg width="6" height="9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.05 4.07 1.25.67c-.2-.2-.6-.2-.9 0-.3.2-.2.6 0 .8l3.3 3-3.2 3c-.2.2-.2.6 0 .8 0 .1.3.2.4.2.1 0 .3-.1.4-.2l3.8-3.4c.3-.2.3-.6 0-.8Z" fill="#fff"/></svg>
         </li>
-        <li class="breadcrumbs-item">
+        <li class="breadcrumbs-item breadcrumbs-link-hotel">
           <a class="breadcrumbs-link">Гостиницы</a>
         </li>
       </ul>
+      <div class="filter-wrapper">
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="catalog-filter-group catalog-filter-group-infrastructure">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -102,8 +107,9 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="catalog-filter-group">
-          <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+        <fieldset class="catalog-filter-group catalog-filter-group-cost">
+          <legend class="catalog-filter-title catalog-filter-title-cost">Стоимость, ₽:</legend>
+          <ul class="catalog-filter-list-cost">
           <li class="catalog-filter-item">
             <label class="control">
               <input class="field" placeholder="0" type="number" name="value-minimum">от
@@ -114,10 +120,9 @@
               <input class="field" placeholder="9000" type="number" name="value-maximum">до
             </label>
           </li>
+        </ul>
           <li class="catalog-filter-item">
-            <label class="visually-hidden">Ползунок диапазонов
               <input class="control-slider" type="range" name="slider-min-max" min="0" max="9000">
-            </label>
           </li>
         </fieldset>
         <div class="filter-button-wrapper">
@@ -125,6 +130,7 @@
           <button class="button button-cancellation" type="reset">Сбросить</button>
         </div>
       </form>
+    </div>
     </section>
     <section class="catalog">
       <div class="sort">
@@ -157,7 +163,7 @@
           <span class="information-hotel information-hotel-type">Гостиница</span>
           <span class="information-hotel information-hotel-price">От 4000 ₽</span>
           <a class="batton button-interest button-detail" href="#">Подробнее</a>
-          <button class="batton button-action button-favourites" type="submit">В Избранное</button>
+          <button class="batton button-action button-favourites" type="submit">в избранное</button>
           <ul class="stars">
             <li class="star-item">
               <img class="star-image" src="images/icon-star.svg" width="18" height="17">
@@ -280,7 +286,7 @@
         <h3>Подпишитесь на рассылку</h3>
         <p>Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form class="newsletter-form" action="//echo.htmlacademy.ru/" method="post">
-          <label for="newsletter-email" class="visually hidden">E-mail</label>
+          <label for="newsletter-email" class="visually-hidden">E-mail</label>
           <input class="field-email" placeholder="Ваш e-mail" type="e-mail" name="newsletter-email" id="newsletter-email" required>
           <button class="button button-action button-newsletter" type="submit">
             <span class="button-subscribe">Подписаться</span>
