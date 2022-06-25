@@ -83,6 +83,12 @@ body {
 
 .logo-wrapper {
   margin-right: 30px;
+  width: 139px;
+  position: relative;
+}
+
+.navigation-left {
+  display: flex;
 }
 
 .pagination-link {
@@ -125,9 +131,44 @@ body {
   background: #756157;
 }
 
+.button-interest:hover {
+  background: #615048;
+}
+
+.button-interest:focus {
+  background: #615048;
+}
+
+.button-interest:active {
+  background: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-interest:disabled {
+  background: #E5E5E5;
+}
+
 .button-action {
   background: #82B3D3;
 }
+
+.button-action:hover {
+  background: #68A2CA;
+}
+
+.button-action:focus {
+  background: #68A2CA;
+}
+
+.button-action:active {
+  color: rgba(255, 255, 255, 0.3);
+  background: #82B3D3;
+}
+
+.button-action:disabled {
+  background: #E5E5E5;
+}
+
 
 .button-selected {
   background: #7DB54F;
@@ -230,9 +271,10 @@ body {
 .main-img {
   color: #FFFFFF;
   background-color: #000000;
-  background-image: url("../images/background-header.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../images/background-header.jpg"), url("../images/divider.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, 1200px 57px;
+  background-position: center bottom;
 }
 
 /* переопределили параметры подзаголовку и абзацу */
@@ -492,9 +534,20 @@ body {
   line-height: 21px;
   color: #333333;
   width: 290px;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-right: 78px;
-  padding: 14px 0px 14px 20px;
+  padding: 14px 20px 14px 20px;
+  appearance: none;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  background-image: url(../images/icon-arrow/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: 12px 7px;
+  background-position: center right 20px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 .select-sheap {
@@ -553,6 +606,18 @@ body {
   color: #333333;
   font-size: 18px;
   line-height: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+  padding: 14px 20px 14px 20px;
+  appearance: none;
+  background-image: url(../images/icon-arrow/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: 12px 7px;
+  background-position: center right 20px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 /* определили параметры для секции Рассылка на странице каталога (цвет шрифта, без фонового изображения */
@@ -577,7 +642,7 @@ body {
 /* задали рамку для иконок слад-шоу */
 .button-list {
   display: flex;
-  border: 3px solid #E5E5E5;
+  border: 2px solid #000000;
   border-radius: 4px;
   width: 48px;
   justify-content: center;
@@ -625,6 +690,7 @@ body {
   max-width: 1200px;
   background-color: #FFFFFF;
   margin: 0 auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .navigation {
@@ -670,6 +736,8 @@ body {
 
 .header-logo {
   vertical-align: middle;
+  position: absolute;
+  top: 5px;
 }
 
 .conteiner-image {
@@ -1076,13 +1144,6 @@ body {
   width: 60px;
 }
 
-.select-number {
-  display: flex;
-  width: 160px;
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
-  padding: 14px 98px 14px 20px;
-}
 
 .newsletter-form {
   display: flex;
