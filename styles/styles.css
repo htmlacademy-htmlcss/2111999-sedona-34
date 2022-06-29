@@ -75,6 +75,11 @@ body {
 .star-item {
   list-style-type: none;
   width: 18px;
+  margin-right: 6px;
+}
+
+.star-item:not(:last-child) {
+  margin-right: 6px;
 }
 
 .pagination-item:not(:last-child) {
@@ -91,19 +96,19 @@ body {
   display: flex;
 }
 
-.pagination-link {
+.pagination-button {
   text-decoration: none;
   padding: 11px 24px 12px 23px;
   width: 12px;
 }
 
-.pagination-link-subsequent {
-  padding: 11px 22px 12px 21px;
+.pagination-button-subsequent {
+  padding: 11px 21px 12px 21px;
   width: 16px;
 }
 
-.pagination-link-last {
-  padding: 11px 18px 12px 18px;
+.pagination-button-last {
+  padding: 10px 18px 12px 18px;
   width: 23px;
 }
 
@@ -118,12 +123,26 @@ body {
   display: block;
 }
 
+.navigation-link-left:hover {
+  color: #756157;
+}
+
+.navigation-link-left:focus {
+  color: #756157;
+}
+
+.navigation-link-left:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+
 /* определили параметры для всех кнопок */
 .button {
   color: #FFFFFF;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* определили параметры цвета для кнопок */
@@ -131,19 +150,23 @@ body {
   background: #756157;
 }
 
+/* в сотоянии наведения*/
 .button-interest:hover {
   background: #615048;
 }
 
+/* в сотоянии фокуса*/
 .button-interest:focus {
   background: #615048;
 }
 
+/*нажатие*/
 .button-interest:active {
   background: #756157;
   color: rgba(255, 255, 255, 0.3);
 }
 
+/*неактивная*/
 .button-interest:disabled {
   background: #E5E5E5;
 }
@@ -172,6 +195,38 @@ body {
 
 .button-selected {
   background: #7DB54F;
+}
+
+.button-selected:hover {
+  background: #6C9E42;
+}
+
+.button-selected:focus {
+  background: #6C9E42;
+}
+
+.button-selected:active {
+  background: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.favorites-number {
+  box-sizing: border-box;
+  font-size: 10px;
+  line-height: 13px;
+  position: absolute;
+  color: #FFFFFF;
+  position: absolute;
+  left: 24px;
+  top: 15px;
+  background-color: #7DB54F;
+  border-radius: 10px;
+  background-size: 20px 20px;
+  padding: 2px 4px 4px 4px;
+}
+
+.navigation-user-favorite {
+  position: relative;
 }
 
 /* переопределили цвет шрифта и задали параменты для кнопок-ссылок */
@@ -241,6 +296,7 @@ body {
   border-radius: 4px;
   padding: 14px 15px;
   border: 0;
+  margin-bottom: 6px;
 }
 
 .button-cancellation {
@@ -248,34 +304,52 @@ body {
   line-height: 20px;
   text-transform: none;
   background-color: transparent;
-  padding: 20px 47px 0 47px;
+  padding: 14px 12px 14px 12px;
   border: 0;
+  color: #FFFFFF;
 }
 
-/* определили параметры для цифры 12 у ссылки Избранное */
-.favorites-number {
-  font-size: 10px;
-  line-height: 13px;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: #7DB54F;
-  display: block;
-  padding: 2px 1px 4px 1px;
-  min-width: 19px;
-  border-radius: 10px;
-  margin-left: -17px;
-  margin-top: 20px;
+.button-cancellation:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-cancellation:focus {
+  color: #68A2CA;
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-cancellation:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* определили параметры для секции с главной картинкой. */
 .main-img {
   color: #FFFFFF;
   background-color: #000000;
-  background-image: url("../images/background-header.jpg"), url("../images/divider.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, 1200px 57px;
-  background-position: center bottom;
+  background-image: url("../images/background-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 51px;
+  padding-bottom: 83px;
+  text-align: center;
+  position: relative;
 }
+
+/* добавляем всевдоэлементом картинку divider */
+
+.main-img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 57px;
+  background-image: url("../images/divider-header.svg");
+  background-size: cover;
+}
+
 
 /* переопределили параметры подзаголовку и абзацу */
 .subtitle h2 {
@@ -425,6 +499,7 @@ body {
   width: 600px;
   padding: 0;
   padding-left: 22px;
+  padding-right: 22px;
   display: block;
   margin: 0;
 }
@@ -444,20 +519,36 @@ body {
   text-decoration: none;
 }
 
+.footer-contact-link:hover {
+  color: #756157;
+}
+
+.footer-contact-link:focus {
+  color: #756157;
+}
+
+.footer-contact-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+
 /* убрали подчеркивания у ссылок соц.сетей */
-.social-vk-link {
+.social-link {
   text-decoration: none;
+}
+
+/*добавили отступы иконкам-ссылкам соц.сетей */
+
+.social-vk-link {
   padding: 13px 12px 13px 12px;
 }
 
 .social-telegram-link {
-  text-decoration: none;
-  padding: 12px 14px 13px 14px;
+  padding: 12px 15px 13px 15px;
 }
 
 .social-Youtube-link {
-  text-decoration: none;
-  padding: 12px 13px 11px 12px;
+  padding: 12px 13px 12px 13px;
 }
 
 /* определили параметры для секции с фильтрами и добавили фоновое изображение */
@@ -487,6 +578,7 @@ body {
   text-decoration: none;
   font-size: 16px;
   line-height: 21px;
+
 }
 
 .catalog-filter-title {
@@ -572,7 +664,7 @@ body {
 }
 
 /* определили параметры для кнопок пагинации */
-.pagination-link {
+.pagination-button {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 20px;
@@ -582,13 +674,50 @@ body {
   background: #82B3D3;
   border: 0px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
-/* переопределили цвет шрифта и фона у первой кнопки пагинации */
-.pagination-current {
-  color: #000000;
-  background: #F2F2F2;
+.pagination-button:hover {
+  background: #68A2CA;
+  border: 1px solid #82B3D3;
+  border-radius: 4px;
 }
+
+.pagination-button:focus {
+  background: #68A2CA;
+  border: 1px solid #82B3D3;
+  border-radius: 4px;
+}
+
+.pagination-button:active {
+  background: #82B3D3;
+  border: 1px solid #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pagination-button-current {
+  background: #F2F2F2;
+  color: #000000;
+}
+
+.pagination-button-current:hover {
+  background: #F2F2F2;
+  color: #000000;
+  border: none;
+}
+
+.pagination-button-current:focus {
+  background: #F2F2F2;
+  color: #000000;
+  border: none;
+}
+
+.pagination-button-current:active {
+  background: #F2F2F2;
+  color: #000000;
+  border: none;
+}
+
 
 /* переопределили цвет и размер шрифта для абзаца */
 .number-of-page {
@@ -651,8 +780,20 @@ body {
   padding: 17px 16px;
 }
 
+.button-list:hover {
+  border: 2px solid #000000;
+}
+
+.button-list:focus {
+  border: 2px solid #68A2CA;
+}
+
+.button-list:active {
+  border: 2px solid #000000;
+}
+
 .image-card {
-  border: 3px solid #E5E5E5;
+  border: 2px solid #E5E5E5;
   border-radius: 4px;
   display: flex;
   width: 48px;
@@ -662,14 +803,38 @@ body {
   padding: 17px 16px;
 }
 
+.image-card:hover {
+  border: 2px solid #000000;
+}
+
+.image-card:focus {
+  border: 2px solid #68A2CA;
+}
+
+.image-card:active {
+  border: 2px solid #000000;
+}
+
 .button-table {
-  border: 3px solid #E5E5E5;
+  border: 2px solid #E5E5E5;
   border-radius: 4px;
   display: flex;
   width: 48px;
   justify-content: center;
   align-items: center;
   padding: 17px 16px;
+}
+
+.button-table:hover {
+  border: 2px solid #000000;
+}
+
+.button-table:focus {
+  border: 2px solid #68A2CA;
+}
+
+.button-table:active {
+  border: 2px solid #000000;
 }
 
 /* визуально скрыли все элементы с классом visually-hidden */
@@ -721,31 +886,45 @@ body {
   padding: 14px 0px 14px 20px;
 }
 
-.navigation-logo {
-  width: 139 px;
-}
-
 .navigation-link-left {
   padding: 20px 17px;
 }
 
 .navigation-link-right {
-  padding: 22px 12px 22px 12px;
+  padding: 20px 12px 20px 12px;
 }
 
+.navigation-link-current {
+  position: relative;
+  cursor: pointer;
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  right: 17px;
+  bottom: 0;
+  left: 17px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
+
+.navigation-link-current:hover {
+  color: #000000;
+}
+
+.navigation-link-current:focus {
+  color: #000000;
+}
+
+.navigation-link-current:active {
+  color: #000000;
+}
 
 .header-logo {
-  vertical-align: middle;
   position: absolute;
-  top: 5px;
-}
-
-.conteiner-image {
-  display: block;
-  width: 100%;
-  padding-top: 51px;
-  padding-bottom: 83px;
-  text-align: center;
+  top: 0;
+  z-index: 1;
 }
 
 .title-advantages {
@@ -772,7 +951,6 @@ body {
   width: 400px;
   padding-top: 92px;
   padding-bottom: 92px;
-
 }
 
 
@@ -971,6 +1149,7 @@ body {
   margin-bottom: 40px;
   padding: 0;
   align-items: center;
+  width: 111px;
 }
 
 .catalog-filter {
@@ -1110,11 +1289,6 @@ body {
 }
 
 
-.breadcrumbs-item-home {
-  padding-right: 10px;
-  width: 16px;
-}
-
 .breadcrumbs-item-arrow {
   padding-right: 10px;
   width: 5;
@@ -1127,7 +1301,19 @@ body {
   justify-content: space-between;
   margin: 0 71px 0 73px;
   padding: 30px 0 25px 0;
-  border-top: 1px solid #E6E6E6;
+  position: relative;
+}
+
+.pagination::before {
+  position: absolute;
+  width: 1055px;
+  height: 0;
+  border: 1px solid #E6E6E6;
+  top: 0;
+  left: 0;
+  bottom: 115px;
+  transform: rotate(180deg);
+  content: "";
 }
 
 .pagination-list {
@@ -1169,15 +1355,308 @@ body {
   min-width: 150px;
 }
 
-.catalog-filter-list-cost {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 20px;
-}
 
 .footer-logo-link {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.footer-logo {
+  fill: #000000;
+  ;
+}
+
+.footer-logo-link:hover .footer-logo {
+  fill: #756157;
+}
+
+.footer-logo-link:focus .footer-logo {
+  fill: #756157;
+}
+
+.footer-logo-link:active .footer-logo {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.social-icon {
+  fill: #83B3D3;
+}
+
+.social-link:hover .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:focus .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.breadcrumbs-icon-home {
+  fill: #FFFFFF;
+  ;
+}
+
+.breadcrumbs-link-home {
+  padding: 5px 10px 5px 0;
+}
+
+.breadcrumbs-link-home:hover .breadcrumbs-icon-home {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link-home:focus .breadcrumbs-icon-home {
+  fill: #FFFFFF;
+  ;
+}
+
+.breadcrumbs-link-home:active .breadcrumbs-icon-home {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-link {
+  cursor: pointer;
+}
+
+.breadcrumbs-link-hotel:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link-hotel:focus {
+  color: #FFFFFF;
+}
+
+.breadcrumbs-link-hotel:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.navigation-icon {
+  fill: #000000;
+}
+
+.navigation-link-right:hover .navigation-icon {
+  fill: #756157;
+}
+
+.navigation-link-right:focus .navigation-icon {
+  fill: #756157;
+}
+
+.navigation-link-right:active .navigation-icon {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  margin-bottom: 30px;
+  width: 288px;
+}
+
+.range-input {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  border: 2px solid #FFFFFF;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  cursor: pointer;
+  background: transparent;
+  color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.range-input-left {
+  border-radius: 4px 0 0 4px;
+  padding-left: 19px;
+}
+
+.range-input-right {
+  border-radius: 0 4px 4px 0;
+  padding-left: 17px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-input:hover {
+  border: solid rgba(255, 255, 255, 0.6);
+}
+
+.range-input:focus {
+  border: 2px solid #FFFFFF;
+  box-shadow:
+    0px 0px 0px 3px #81B3D2,
+    0px 0px 0px 3px #81B3D2 inset;
+}
+
+.range-input:active {
+  background: #756257;
+  border: 2px solid #FFFFFF;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  width: 288px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background: #FFFFFF;
+  left: 0;
+  width: 228px;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.range-toggle:hover {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  border: 3px solid #83B3D3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  border: 2px solid #83B3D3;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  left: 0;
+  top: -8px;
+}
+
+.toggle-max {
+  right: 49px;
+  top: -8px;
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  left: 0;
+  top: 3px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+}
+
+.control:hover .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.control:focus .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+  border: 3px solid #83B3D3;
+}
+
+.control:active .control-mark {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:disabled + .control-mark {
+  background: #82B3D3;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/check-mark.svg);
+  width: 12px;
+  height: 10px;
+  top: 5px;
+  left: 4px;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  background: #3F5E72;
+  border-radius: 50%;
+}
+
+.control-label {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.select-control:hover,
+.select-control:focus {
+  border: 2px solid #68A2CA;
+}
+
+.select-control:active {
+  border: 2px solid #3F5E72;
+}
+
+.select-control:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.select-number:hover,
+.select-number:focus {
+  border: 2px solid #68A2CA;
+}
+
+.select-number:active {
+  border: 2px solid #3F5E72;
+}
+
+.select-number:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.field-email:hover {
+  background: #E6E6E6;
+}
+
+.field-email:focus {
+  background: #E6E6E6;
+  border: 3px solid #83B3D3;
+}
+
+.field-email:active {
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+.field-email :disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
