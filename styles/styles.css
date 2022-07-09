@@ -24,11 +24,9 @@ html {
   padding: 0;
 }
 
-
 .main-index {
   flex-grow: 1;
 }
-
 
 body {
   font-family: "PT Sans", sans-serif;
@@ -381,7 +379,7 @@ body {
   padding-bottom: 90px;
 }
 
-.image-wrapper .advantages-item h3 {
+.advantages-item h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -450,7 +448,7 @@ body {
   text-align: center;
   padding-top: 91px;
   padding-bottom: 93px;
-  max-width: 0 auto;
+  margin: 0 auto;
 }
 
 .search h3 {
@@ -640,7 +638,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-right: 78px;
-  padding: 14px 52px 14px 20px;
+  padding: 12px 52px 12px 20px;
   appearance: none;
   background-image: url(../images/icon-arrow/icon-arrow-down.svg);
   background-repeat: no-repeat;
@@ -649,6 +647,10 @@ body {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.select-control {
+  -moz-appearance: textfield;
 }
 
 .select-sheap {
@@ -750,7 +752,6 @@ body {
   text-transform: none;
   margin: 0;
   margin-right: 51px;
-  width: 175 px;
   align-items: center;
 }
 
@@ -772,6 +773,10 @@ body {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.select-number {
+  -moz-appearance: textfield;
 }
 
 .select-number:hover {
@@ -815,11 +820,9 @@ body {
   display: flex;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  width: 48px;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
-  padding: 17px 16px;
+  padding: 15px 14px;
 }
 
 .button-slide-curent {
@@ -842,11 +845,9 @@ body {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   display: flex;
-  width: 48px;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
-  padding: 17px 16px;
+  padding: 15px 14px;
 }
 
 .image-card:hover {
@@ -865,10 +866,9 @@ body {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   display: flex;
-  width: 48px;
   justify-content: center;
   align-items: center;
-  padding: 17px 16px;
+  padding: 15px 14px;
 }
 
 .button-table:hover {
@@ -952,11 +952,12 @@ body {
 .navigation-link-current::before {
   position: absolute;
   right: 17px;
-  bottom: 1px;
   left: 17px;
+  bottom: -1px;
   height: 2px;
   background-color: #756257;
   content: "";
+  z-index: 2;
 }
 
 .navigation-link-current:hover {
@@ -1034,6 +1035,8 @@ body {
   padding-bottom: 77px;
 }
 
+
+
 .advantages-list-base-wrapper {
   padding-top: 103px;
   padding-bottom: 102px;
@@ -1067,7 +1070,18 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  margin: 0;
+}
+
+.advantages-text-housing {
+  margin: 0 116px 0 116px;
+}
+
+.advantages-text-food {
+  margin: 0 85px 0 85px;
+}
+
+.advantages-text-souvenirs {
+  margin: 0 85px 0 85px;
 }
 
 .advantages-bridge h3 {
@@ -1236,9 +1250,11 @@ body {
 }
 
 .slide-show {
-  display: flex;
-  width: 160px;
+  display: grid;
+  grid-template-columns: 48px 48px 48px;
+  gap: 8px;
   margin: 0;
+  max-width: 160px;
   justify-content: center;
 }
 
@@ -1507,15 +1523,25 @@ body {
   box-sizing: border-box;
 }
 
+.range-input {
+  -moz-appearance: textfield;
+}
+
+.range-input::placeholder {
+  color: #FFFFFF;
+}
+
 .range-input-left {
   border-radius: 4px 0 0 4px;
   padding-left: 19px;
+  padding-right: 55px;
   border-right: 0;
 }
 
 .range-input-right {
   border-radius: 0 4px 4px 0;
   padding-left: 17px;
+  padding-right: 55px;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -1535,6 +1561,12 @@ body {
     0 0 0 3px #81B3D2 inset;
   outline: 0;
 }
+
+.range-input:not(:placeholder-shown) {
+  background: #756257;
+  border-color: #FFFFFF;
+}
+
 
 .range-input:active {
   background: #756257;
@@ -1622,7 +1654,7 @@ body {
 }
 
 .control-input:disabled + .control-mark {
-  background: #82B3D3;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
@@ -1634,6 +1666,7 @@ body {
   top: 5px;
   left: 4px;
 }
+
 
 .control-input[type="radio"]:checked + .control-mark::before {
   content: "";
@@ -2030,6 +2063,10 @@ body {
 .field-number::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.field-number {
+  -moz-appearance: textfield;
 }
 
 .tooltip-text {
