@@ -82,21 +82,18 @@
                   <span>— №1 —</span>
                   <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                 </div>
-                <img src="images/advantages-list-foto/town.jpg" width="800" height="384" alt="Вид городка Седона.">
+                <img class="advantages-image-town" src="images/advantages-list-foto/town.jpg" width="800" height="384"
+                  alt="Вид городка Седона.">
               </div>
               <ul class="advantages-list advantages-list-additional">
                 <li class="advantages-item advantages-item-housing">
-                  <div class="advantages-list-additional-wrapper">
-                    <img class="advantage-list-icon advantage-icon-housing"
-                      src="../images/advantages-list-icon/icon-home.svg" width="75" height="72" alt="Иконка домика.">
+                  <div class="advantages-list-additional-wrapper additional-wrapper-housing">
                     <h3>Жильё</h3>
                     <p class="advantages-text-housing">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                   </div>
                 </li>
                 <li class="advantages-item advantages-item-food">
                   <div class="advantages-list-additional-wrapper">
-                    <img class="advantage-list-icon advantage-icon-food"
-                      src="../images/advantages-list-icon/icon-food.svg" width="74" height="70" alt="Иконка бургера.">
                     <h3>Еда</h3>
                     <p class="advantages-text-food">Всегда заказывайте <br> топовый фирменный бургер, вы не
                       разочаруетесь!</p>
@@ -104,9 +101,6 @@
                 </li>
                 <li class="advantages-item advantages-item-souvenirs">
                   <div class="advantages-list-additional-wrapper">
-                    <img class="advantage-list-icon advantage-icon-souvenirs"
-                      src="../images/advantages-list-icon/icon-souvenirs.svg" width="64" height="76"
-                      alt="Иконка сувенира">
                     <h3>Сувениры</h3>
                     <p class="advantages-text-souvenirs">Не только китайского, <br> но и настоящего местного
                       производства!</p>
@@ -116,7 +110,8 @@
             </li>
             <li class="advantages-item">
               <div class="advantages-key">
-                <img src="images/advantages-list-foto/bridge.jpg" width="800" height="384" alt="Вид на мост дьявола.">
+                <img class="advantages-image-bridge" src="images/advantages-list-foto/bridge.jpg" width="800"
+                  height="384" alt="Вид на мост дьявола.">
                 <div class="advantages-bridge">
                   <h3>Там есть <br> мост дьявола</h3>
                   <span>— №2 —</span>
@@ -228,7 +223,7 @@
             <div class="arrival">
               <label class="arrival-date" for="arrival">Дата заезда:</label>
               <div class="field-wrapper">
-                <input class="text-input" type="text" id="arrival" name="arrival" value="" placeholder="Укажите дату">
+                <input class="text-input" type="text" id="arrival" name="arrival" value="" placeholder="27 апреля 2020">
                 <button class="date-button" type="button">
                   <span class="visually-hidden">Календарь</span>
                   <svg class="icon-calendar" width="15" height="15" viewBox="0 0 15 15" fill="none"
@@ -247,7 +242,7 @@
               <label class="departure-date" for="departure">Дата выезда:</label>
               <div class="field-wrapper">
                 <input class="text-input" type="text" id="departure" name="departure" value=""
-                  placeholder="Укажите дату">
+                  placeholder="1 сентября 2021">
                 <button class="date-button" type="button">
                   <span class="visually-hidden">Календарь</span>
                   <svg class="icon-calendar" width="15" height="15" viewBox="0 0 15 15" fill="none"
@@ -266,7 +261,7 @@
               <div class="field-parameters-adults">
                 <label class="field-label-adults" for="adults">Взрослые:</label>
                 <span class="field-box field-box-left">
-                  <button class="field-button-minus">
+                  <button class="field-button-minus" type="button">
                     <span class="visually-hidden">Уменьшить значение</span>
                     <svg class="icon-minus" width="13" height="1" viewBox="0 0 13 1" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -274,7 +269,7 @@
                     </svg>
                   </button>
                   <input class="field-number" type="number" id="adults" name="adults" value="2" placeholder="2">
-                  <button class="field-button-plus">
+                  <button class="field-button-plus" type="button">
                     <span class="visually-hidden">Увеличить значение</span>
                     <svg class="icon-plus" width="13" height="13" viewBox="0 0 13 13" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -294,7 +289,7 @@
                     лет. Дети до 6 лет размещаются бесплатно.</span>
                 </span>
                 <span class="field-box field-box-right">
-                  <button class="field-button-minus">
+                  <button class="field-button-minus" type="button">
                     <span class="visually-hidden">Уменьшить значение</span>
                     <svg class="icon-minus" width="13" height="1" viewBox="0 0 13 1" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -302,7 +297,7 @@
                     </svg>
                   </button>
                   <input class="field-number" type="number" id="children" name="children" value="1" placeholder="1">
-                  <button class="field-button-plus">
+                  <button class="field-button-plus" type="button">
                     <span class="visually-hidden">Увеличить значение</span>
                     <svg class="icon-plus" width="13" height="13" viewBox="0 0 13 13" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
