@@ -1665,8 +1665,6 @@ body {
   border-radius: 4px;
   left: 0;
   top: 3px;
-  box-shadow: 0 0 3px transparent;
-  box-sizing: border-box;
 }
 
 .control {
@@ -1695,40 +1693,8 @@ body {
   height: 10px;
   background: #3F5E72;
   border-radius: 50%;
-  top: 5px;
-  left: 5px;
-}
-
-.control-input[type="checkbox"]:hover + .control-mark {
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.control-input[type="checkbox"]:focus + .control-mark {
-  box-shadow: 0 0 3px #83B3D3;
-}
-
-.control-input[type="checkbox"]:active + .control-mark {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.control-input[type="checkbox"]:disabled + .control-mark {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.control-input[type="radio"]:hover + .control-mark {
-  background: #FFFFFF;
-}
-
-.control-input[type="radio"]:checked:focus + .control-mark {
-  box-shadow: 0 0 3px #83B3D3;
-}
-
-.control-input[type="radio"]:focus:not(:checked) + .control-mark {
-  border: 3px solid #83B3D3;
-}
-
-.control-input[type="radio"]:disabled + .control-mark {
-  background: rgba(255, 255, 255, 0.8);
+  top: 2px;
+  left: 2px;
 }
 
 .control-label {
@@ -2304,4 +2270,41 @@ body {
   background-repeat: no-repeat;
   background-position: 169px 78px;
   padding-top: 182px;
+}
+
+
+.control-checkbox:hover .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.control-checkbox:focus .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3;
+}
+
+.control-checkbox:active .control-mark {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:disabled .control-mark {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+
+.control-mark-point {
+  box-sizing: border-box;
+  border: 3px solid transparent;
+}
+
+
+.control-radio:hover .control-mark {
+  background: #FFFFFF;
+}
+
+.control-radio:focus .control-mark-point {
+  border: 3px solid #83B3D3;
+}
+
+.control-input:checked .control-radio:focus + .control-mark-point {
+  outline: 3px solid #83B3D3;
 }
