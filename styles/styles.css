@@ -135,6 +135,14 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
+.navigation-logo:hover .header-logo {
+  opacity: 0.3;
+}
+
+.navigation-logo:focus .header-logo {
+  opacity: 0.8;
+}
+
 .button {
   color: #FFFFFF;
   text-align: center;
@@ -350,6 +358,8 @@ body {
   background-position: center;
   padding-top: 51px;
   padding-bottom: 76px;
+  padding-left: 371px;
+  padding-right: 371px;
   text-align: center;
   position: relative;
 }
@@ -486,7 +496,7 @@ body {
 
 .newsletter-section {
   color: #FFFFFF;
-  background-color: #82B3D3;
+  background-color: #756157;
   background-image: url("../images/background-subscribe.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -582,7 +592,7 @@ body {
 
 .filer-content-hotel {
   color: #FFFFFF;
-  background-color: #82B3D3;
+  background-color: #756157;
   background-image: url("../images/background-filter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1665,8 +1675,6 @@ body {
   border-radius: 4px;
   left: 0;
   top: 3px;
-  box-shadow: 0 0 3px transparent;
-  box-sizing: border-box;
 }
 
 .control {
@@ -1697,38 +1705,6 @@ body {
   border-radius: 50%;
   top: 5px;
   left: 5px;
-}
-
-.control-input[type="checkbox"]:hover + .control-mark {
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.control-input[type="checkbox"]:focus + .control-mark {
-  box-shadow: 0 0 3px #83B3D3;
-}
-
-.control-input[type="checkbox"]:active + .control-mark {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.control-input[type="checkbox"]:disabled + .control-mark {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.control-input[type="radio"]:hover + .control-mark {
-  background: #FFFFFF;
-}
-
-.control-input[type="radio"]:checked:focus + .control-mark {
-  box-shadow: 0 0 3px #83B3D3;
-}
-
-.control-input[type="radio"]:focus:not(:checked) + .control-mark {
-  border: 3px solid #83B3D3;
-}
-
-.control-input[type="radio"]:disabled + .control-mark {
-  background: rgba(255, 255, 255, 0.8);
 }
 
 .control-label {
@@ -2277,12 +2253,14 @@ body {
   height: auto;
   color: #FFFFFF;
   background-color: #82B3D3;
+  object-fit: cover;
 }
 
 .advantages-image-bridge {
   height: auto;
   color: #FFFFFF;
   background-color: #82B3D3;
+  object-fit: cover;
 }
 
 .advantages-item-housing {
@@ -2304,4 +2282,37 @@ body {
   background-repeat: no-repeat;
   background-position: 169px 78px;
   padding-top: 182px;
+}
+
+.control-input:hover + .control-mark-point {
+  background: #FFFFFF;
+}
+
+.control-input:hover + .control-mark-check {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.control-input:focus + .control-mark-point {
+  outline: #83B3D3 solid 3px;
+}
+
+.control-input:focus + .control-mark-check {
+  background: rgba(255, 255, 255, 0.6);
+  outline: #83B3D3 solid 3px;
+}
+
+.control-input:active + .control-mark-point {
+  background: #FFFFFF;
+}
+
+.control-input:active + .control-mark-check {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:disabled + .control-mark-point {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.control-input:disabled + .control-mark-check {
+  background: rgba(0, 0, 0, 0.3);
 }
